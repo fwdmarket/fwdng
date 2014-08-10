@@ -1,0 +1,10 @@
+{
+    "name": "fwdmarket/fwdng",
+    "license": "MIT",
+    "ignore":["bower.json"],
+    "dependencies":{
+        "angular": ">= 1.0.2",
+        "jquery": ">=1.6",
+        "jquery-ui": ">=1.10"
+    }
+}

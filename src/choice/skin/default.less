@@ -1,0 +1,74 @@
+.clear(){
+  &:after{content: " "; display: table; clear:both;}
+}
+.coloredGrid{
+  .clear();
+  ul.fwdChoice{
+    list-style: none;
+    li{
+      float:left;
+      background-color: #e8e8e8;
+      color: #7f7f7f;
+      border:solid 1px transparent ;
+      input{display:none;}
+      label{padding:15px 10px; display:block;}
+      &+li{margin-left:5px;}
+    }
+  }
+}
+.coloredGrid{
+  .checkFemale{
+    font-weight: bold;
+    &.selected, &:hover{
+      background-color: #ff4d59;
+      border-radius: 2px;
+      border: solid 1px #d43e49;
+      color:#FFF;
+    }
+  }
+  .checkMale{
+    font-weight: bold;
+    &.selected, &:hover{
+      background-color: #71a0ff;
+      border-radius: 2px;
+      color:#FFF;
+      border: solid 1px #6b80d9;
+    }
+  }
+  .lvl1{
+    font-weight: bold;
+    &.selected, &:hover{
+      background-color: #2ecc71;
+      border: 1px solid #27ae60;
+      color:#FFF;
+      border-radius: 2px;
+    }
+  }
+  .lvl2{
+    font-weight: bold;
+    &.selected, &:hover{
+      background-color: #f1c40f;
+      border: 1px solid #deb40d;
+      color:#FFF;
+      border-radius: 2px;
+    }
+  }
+  .lvl3{
+    font-weight: bold;
+    &.selected, &:hover{
+      background-color: #eb8e20;
+      border: 1px solid #e67e22;
+      color:#FFF;
+      border-radius: 2px;
+    }
+  }
+  .lvl4{
+    font-weight: bold;
+    &.selected, &:hover{
+      background-color: #ee7777;
+      border: 1px solid #de6f6f;
+      color:#FFF;
+      border-radius: 2px;
+    }
+  }
+}

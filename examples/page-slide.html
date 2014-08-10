@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>FwdAngular</title>
+</head>
+<body data-ng-controller="PageController">
+    <button data-ng-click="changeContent()">Change Content</button>
+    <button data-ng-click="show = !show">Switch PageSlide</button>
+
+    <div ng-if="show">
+        <div fwd-page-slide="{{content}}"></div>
+    </div>
+    <br/>
+    <div ng-if="!show">
+        Something cool
+    </div>
+
+    <script src="/examples/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/examples/lib/jquery-ui/ui/effect.js"></script>
+    <script src="/examples/lib/jquery-ui/ui/effect-slide.js"></script>
+    <script src="/examples/lib/angular/angular.min.js"></script>
+    <script src="/src/page-slide/page-slide.js"></script>
+    <script src="/examples/page-slide-app.js"></script>
+</body>
+</html>

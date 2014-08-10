@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>FwdAngular</title>
+    <link rel="stylesheet" href="/src/choice/skin/default.css"/>
+</head>
+<body data-ng-controller="PageController">
+    <button data-ng-click="changeValue()">Change Value</button>
+
+    <h3>Radio</h3>
+
+    <div fwd-choice="choices" name="singleC" expanded value="selected"></div>
+    <h4>Radio with CSS</h4>
+
+    <div fwd-choice="choices" name="singleC1" class="coloredGrid" expanded value="selected"></div>
+    <div fwd-choice="choiceLevels" name="multiC2" class="coloredGrid" expanded value="selectedL"></div>
+    <h3>Checkboxes</h3>
+
+    <div fwd-choice="choices" name="multiC" multiple expanded value="selectedM"></div>
+    <h4>Checkboxes with CSS</h4>
+
+    <div fwd-choice="choices" name="multiC1" multiple class="coloredGrid" expanded value="selectedM"></div>
+    <div fwd-choice="choiceLevels" name="multiC2" multiple class="coloredGrid" expanded value="selectedML"></div>
+    <h3>Select</h3>
+
+    <div fwd-choice="choices" name="singleS" value="selected"></div>
+    <h3>Multi Select</h3>
+
+    <div fwd-choice="choices" name="multiS" multiple value="selectedM"></div>
+
+    <script type="text/ng-template" id="fwdChoice.tpl.html">
+        <ul data-ng-if="expanded && !multiple" class="fwdChoice">
+            <li ng-repeat="choice in choices" class="{{choice.cls}}" ng-class="{selected:data.selected.value==choice.value}">
+                <label>
+                    <input type="radio" name="{{name}}" ng-click="change(choice)" ng-checked="choice.value == data.selected.value"
+                    value="{{choice.value}}"/>
+                    {{choice.label}}
+                </label>
+            </li>
+        </ul>
+        <ul data-ng-if="expanded && multiple" class="fwdChoice">
+            <li ng-repeat="choice in choices" class="{{choice.cls}}" ng-class="{selected:data.selected.indexOf(choice)!==-1}">
+                <label>
+                    <input type="checkbox" name="{{name}}" ng-click="change(choice)" ng-checked="data.selected.indexOf(choice)!==-1"
+                    value="{{choice.value}}"/>
+                    {{choice.label}}
+                </label>
+            </li>
+        </ul>
+        <select data-ng-if="!expanded && multiple" ng-model="data.selected" name="{{name}}" multiple="multiple"
+        ng-options="choice.label for choice in choices" class="fwdChoice"></select>
+        <select data-ng-if="!expanded && !multiple" ng-model="data.selected" name="{{name}}"
+        ng-options="choice.label for choice in choices" class="fwdChoice"></select>
+    </script>
+
+    <script src="/examples/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/examples/lib/angular/angular.min.js"></script>
+    <script src="/src/choice/choice.js"></script>
+    <!--<script src="/src/choice/choice.tpl.js"></script>-->
+    <script src="/examples/choice-app.js"></script>
+</body>
+</html>

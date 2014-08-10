@@ -1,0 +1,84 @@
+.coloredGrid:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.coloredGrid ul.fwdChoice {
+  list-style: none;
+}
+.coloredGrid ul.fwdChoice li {
+  float: left;
+  background-color: #e8e8e8;
+  color: #7f7f7f;
+  border: solid 1px transparent ;
+}
+.coloredGrid ul.fwdChoice li input {
+  display: none;
+}
+.coloredGrid ul.fwdChoice li label {
+  padding: 15px 10px;
+  display: block;
+}
+.coloredGrid ul.fwdChoice li + li {
+  margin-left: 5px;
+}
+.coloredGrid .checkFemale {
+  font-weight: bold;
+}
+.coloredGrid .checkFemale.selected,
+.coloredGrid .checkFemale:hover {
+  background-color: #ff4d59;
+  border-radius: 2px;
+  border: solid 1px #d43e49;
+  color: #FFF;
+}
+.coloredGrid .checkMale {
+  font-weight: bold;
+}
+.coloredGrid .checkMale.selected,
+.coloredGrid .checkMale:hover {
+  background-color: #71a0ff;
+  border-radius: 2px;
+  color: #FFF;
+  border: solid 1px #6b80d9;
+}
+.coloredGrid .lvl1 {
+  font-weight: bold;
+}
+.coloredGrid .lvl1.selected,
+.coloredGrid .lvl1:hover {
+  background-color: #2ecc71;
+  border: 1px solid #27ae60;
+  color: #FFF;
+  border-radius: 2px;
+}
+.coloredGrid .lvl2 {
+  font-weight: bold;
+}
+.coloredGrid .lvl2.selected,
+.coloredGrid .lvl2:hover {
+  background-color: #f1c40f;
+  border: 1px solid #deb40d;
+  color: #FFF;
+  border-radius: 2px;
+}
+.coloredGrid .lvl3 {
+  font-weight: bold;
+}
+.coloredGrid .lvl3.selected,
+.coloredGrid .lvl3:hover {
+  background-color: #eb8e20;
+  border: 1px solid #e67e22;
+  color: #FFF;
+  border-radius: 2px;
+}
+.coloredGrid .lvl4 {
+  font-weight: bold;
+}
+.coloredGrid .lvl4.selected,
+.coloredGrid .lvl4:hover {
+  background-color: #ee7777;
+  border: 1px solid #de6f6f;
+  color: #FFF;
+  border-radius: 2px;
+}
