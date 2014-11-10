@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>FwdAngular</title>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css"
+        rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/timeline/skin/default.css"/>
+</head>
+<body data-ng-controller="PageController">
+<button data-ng-click="changeContent()">Change Content</button>
+
+<div fwd-timeline="events"></div>
+
+<script type="text/ng-template" id="fwdTimeline.tpl.html">
+  <ul class="fwdTimeline">
+    <li ng-repeat="item in timeline">
+      <time>
+        <span class="time">{{getTime(item.time)}}</span>
+      </time>
+      <i class="{{item.icon}}"></i>
+      <div class="box">
+        <h2>{{item.title}}</h2>
+        <p>{{item.description}}</p>
+      </div>
+    </li>
+  </ul>
+</script>
+
+<script src="/examples/lib/jquery/dist/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+<script src="/examples/lib/angular/angular.min.js"></script>
+<script src="/src/timeline/timeline.js"></script>
+<script src="/examples/timeline-app.js"></script>
+</body>
+</html>
